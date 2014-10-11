@@ -15,7 +15,7 @@ class MagnetFinder:
 		iter = re.finditer(self.grouped_link_pattern, html)
 		
 		for match in iter:
-			set = (match.group(0), match.group(3))
+			set = (match.group(4), match.group(0))
 			tupels.append(set)
 		
 		return tupels
