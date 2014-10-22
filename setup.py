@@ -8,5 +8,5 @@ setup(name='commonpy',
  author='Nicholas Wright',
  author_email='dozedoffagain@gmail.com',
  url='https://github.com/dozedoff/commonpy',
- packages=['commonpy'],
+ packages=['commonpy', 'commonpy.net', 'commonpy.util'],
 )
