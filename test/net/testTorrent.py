@@ -1,6 +1,6 @@
 import unittest
 
-import python.net.torrent as torrent
+import commonpy.net.torrent as torrent
 
 class TestTorrent (unittest.TestCase):
 	html = '<a href="magnet:?xt=urn:btih:33d04dc722d17a405519d7c5ee022e1c0f957da1&dn=LinuxonAndroid+Project+Ubuntu+12.04+Core+Image&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a>			<a href="//piratebaytorrents.info/7150593/LinuxonAndroid_Project_Ubuntu_12.04_Core_Image.7150593.TPB.torrent" title="Download this torrent"><img src="/static/img/dl.gif" class="dl" alt="Download" /></a><img src="/static/img/11x11p.png" /><img src="/static/img/11x11p.png" />'
