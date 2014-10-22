@@ -1,3 +1,6 @@
 # python bytecode files
 *.pyc
 *.pyo
+
+# build directory
+build/
