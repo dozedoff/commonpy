@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from distutils.core import setup
+from setuptools import setup, find_packages
 
 setup(name='commonpy',
  version='0.1',
@@ -8,5 +8,5 @@ setup(name='commonpy',
  author='Nicholas Wright',
  author_email='dozedoffagain@gmail.com',
  url='https://github.com/dozedoff/commonpy',
- packages=['commonpy', 'commonpy.net', 'commonpy.util'],
+ packages=find_packages(),
 )

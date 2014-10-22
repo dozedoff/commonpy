@@ -4,3 +4,4 @@
 
 # build directory
 build/
+commonpy.egg-info/
