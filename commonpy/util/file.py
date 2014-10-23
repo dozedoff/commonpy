@@ -24,7 +24,7 @@ def _regex_extent_count (output):
 		extents=match.group(2)
 		return int(extents)
 	
-	return 0
+	return -1
 
 def btrfs_defragment (file_path):
 	call(["btrfs", "fi" ,"defrag", "-t", "10g",file_path])
