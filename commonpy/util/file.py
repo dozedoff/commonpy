@@ -18,10 +18,15 @@ def get_extents (file_path):
 	return _regex_extent_count(output)
 
 def _regex_extent_count (output):
-	selection=re.findall(": [0-9]* extents? found",output)
-	selection=re.findall("[0-9]*",selection[0])
-	extents=int(selection[2])
-	return extents
+	iter = re.finditer(extent_pattern, output)
+
+	for match in iter:
+		extents=match.group(2)
+		return int(extents)
+	
+	return 0
 
 def btrfs_defragment (file_path):
 	call(["btrfs", "fi" ,"defrag", "-t", "10g",file_path])
+
+extent_pattern = re.compile('(: )([0-9]*)( extents? found)')
