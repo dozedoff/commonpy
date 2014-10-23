@@ -15,6 +15,9 @@ def walk_directory (root_path):
 
 def get_extents (file_path):
 	output=check_output(["filefrag", file_path])
+	return _regex_extent_count(output)
+
+def _regex_extent_count (output):
 	selection=re.findall(": [0-9]* extents? found",output)
 	selection=re.findall("[0-9]*",selection[0])
 	extents=int(selection[2])
