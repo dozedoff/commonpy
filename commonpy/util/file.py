@@ -4,6 +4,8 @@ import re
 from subprocess import check_output
 from subprocess import call
 
+extent_pattern = re.compile('(: )([0-9]*)( extents? found)')
+
 def walk_directory (root_path):
 	file_paths = []
 	for root_path, dir, files in os.walk(root_path):
@@ -28,5 +30,3 @@ def _regex_extent_count (output):
 
 def btrfs_defragment (file_path):
 	call(["btrfs", "fi" ,"defrag", "-t", "10g",file_path])
-
-extent_pattern = re.compile('(: )([0-9]*)( extents? found)')
