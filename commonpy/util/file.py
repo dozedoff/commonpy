@@ -17,7 +17,7 @@ def walk_directory (root_path):
 	return file_paths
 
 def get_extents (file_path):
-	output=check_output(["filefrag", file_path],stderr=subprocess.STDOUT)
+	output=check_output(["filefrag", file_path],stderr=subprocess.STDOUT, bufsize=-1)
 	return _regex_extent_count(output)
 
 def _regex_extent_count (output):
