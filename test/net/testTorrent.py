@@ -30,7 +30,7 @@ class TestTorrent (unittest.TestCase):
 	</tr>
 	<tr>
 """
-        magnet = 'magnet:?xt=urn:btih:33d04dc722d17a405519d7c5ee022e1c0f957da1&dn=LinuxonAndroid+Project+Ubuntu+12.04+Core+Image&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337'
+	magnet = 'magnet:?xt=urn:btih:33d04dc722d17a405519d7c5ee022e1c0f957da1&dn=LinuxonAndroid+Project+Ubuntu+12.04+Core+Image&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337'
 	magnet2 = 'magnet:?xt=urn:btih:5fc8fdef02b0628a4d6115a048c9090069fd5977&dn=Ubuntu+10.04+LTS+Lucid+Lynx+Desktop+vmware+image&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337'
 	magnet3 = 'magnet:?xt=urn:btih:36be2135abccf4032fbb28bb1b0d4fdaf749f858&dn=Ubuntu+GNOME+13.04+Raring+Ringtail+Desktop+image+for+64-bit+PC+%28&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337'
 	
