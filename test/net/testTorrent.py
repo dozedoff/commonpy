@@ -70,3 +70,15 @@ class TestTorrent (unittest.TestCase):
 	def test_get_magnet_links_count2 (self):
 		found =  self.magnet_finder.get_magnet_links(self.html2)
 		self.assertEqual(len(found), 2)
+		
+	def test_get_magnet_tuples_count (self):
+		found = self.magnet_finder.get_magnet_tuples(self.html2)
+		self.assertEqual(len(found), 2)
+		
+	def test_get_magnet_tuples_hash (self):
+		found = self.magnet_finder.get_magnet_tuples(self.html2)
+		self.assertEqual(found[0][0], "5fc8fdef02b0628a4d6115a048c9090069fd5977")
+		
+	def test_get_magnet_tuples_magnet (self):
+		found = self.magnet_finder.get_magnet_tuples(self.html2)
+		self.assertEqual(found[0][1], "magnet:?xt=urn:btih:5fc8fdef02b0628a4d6115a048c9090069fd5977&dn=Ubuntu+10.04+LTS+Lucid+Lynx+Desktop+vmware+image&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337")
