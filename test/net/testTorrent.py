@@ -37,19 +37,36 @@ class TestTorrent (unittest.TestCase):
 	def setUp (self):
 		self.magnet_finder = torrent.MagnetFinder()
 
-	def test_get_magnet_links_content (self):
+	def test_get_magnet_links_content_dep (self):
 		found =  self.magnet_finder.get_magnet_links(self.html, "1337")
 		self.assertEqual(found[0], self.magnet)
 
-	def test_get_magnet_links_count (self):
+	def test_get_magnet_links_count_dep (self):
 		found =  self.magnet_finder.get_magnet_links(self.html, "1337")
 		self.assertEqual(len(found), 1)
 
-	def test_get_magnet_links_content2 (self):
+	def test_get_magnet_links_content2_dep (self):
 		found =  self.magnet_finder.get_magnet_links(self.html2, "1337")
 		self.assertEqual(found[0], self.magnet2)
 		self.assertEqual(found[1], self.magnet3)
 
-	def test_get_magnet_links_count2 (self):
+	def test_get_magnet_links_count2_dep (self):
 		found =  self.magnet_finder.get_magnet_links(self.html2, "1337")
+		self.assertEqual(len(found), 2)
+	
+	def test_get_magnet_links_content (self):
+		found =  self.magnet_finder.get_magnet_links(self.html)
+		self.assertEqual(found[0], self.magnet)
+
+	def test_get_magnet_links_count (self):
+		found =  self.magnet_finder.get_magnet_links(self.html)
+		self.assertEqual(len(found), 1)
+
+	def test_get_magnet_links_content2 (self):
+		found =  self.magnet_finder.get_magnet_links(self.html2)
+		self.assertEqual(found[0], self.magnet2)
+		self.assertEqual(found[1], self.magnet3)
+
+	def test_get_magnet_links_count2 (self):
+		found =  self.magnet_finder.get_magnet_links(self.html2)
 		self.assertEqual(len(found), 2)

@@ -5,7 +5,8 @@ class MagnetFinder:
 		self.full_link_pattern = re.compile('magnet:\?xt=urn:btih:[0-9a-zA-Z]*&dn=.*&tr=[a-zA-Z0-9%.:/]*')
 		self.grouped_link_pattern = re.compile('((magnet:\?)(xt=urn:btih:)([0-9a-zA-Z]*)(&dn=.*)(&tr=[a-zA-Z0-9%.:/]*)+)')
 		
-	def get_magnet_links (self,raw_html, magnet_terminator):
+	# Deprecated = (self,raw_html, magnet_terminator)
+	def get_magnet_links (self,raw_html, magnet_terminator = None):
 		selection=re.findall(self.full_link_pattern,raw_html)
 		return selection
 
