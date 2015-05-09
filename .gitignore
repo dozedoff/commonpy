@@ -6,3 +6,4 @@
 build/
 commonpy.egg-info/
 dist/
+/.env
