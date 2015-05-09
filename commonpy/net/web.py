@@ -1,5 +1,5 @@
-from subprocess import check_output
+import requests
 
 def get_page (url):
-        output=check_output(["wget", "-q", "-O", "-", url])
-        return output
+    page = requests.get(url)
+    return page.text
