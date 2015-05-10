@@ -6,5 +6,9 @@ python:
 
 install:
   - "pip install -r requirements.txt"
+  - "pip install coveralls"
 
 script: "./setup.py test"
+
+after_success:
+  - coveralls
