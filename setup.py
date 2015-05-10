@@ -9,4 +9,5 @@ setup(name='commonpy',
  author_email='dozedoffagain@gmail.com',
  url='https://github.com/dozedoff/commonpy',
  packages=find_packages(),
+ test_suite="test"
 )

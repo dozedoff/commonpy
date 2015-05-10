@@ -6,4 +6,10 @@
 build/
 commonpy.egg-info/
 dist/
+
+# Virtualenv directory
 /.env
+
+# Coverage directories
+/.coverage
+/htmlcov
