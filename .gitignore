@@ -13,3 +13,7 @@ dist/
 # Coverage directories
 /.coverage
 /htmlcov
+
+# Pydev project files
+/.project
+/.pydevproject
